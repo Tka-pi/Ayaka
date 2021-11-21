@@ -197,9 +197,9 @@ function eval(){
         zetsuen=0.75;
     }
 
-    kiri_time=0.8;
+    kiri_time=1;
     if(time>=10){
-        kiri_time=8/time;
+        kiri_time=8/(time-2);
     }
 
     
