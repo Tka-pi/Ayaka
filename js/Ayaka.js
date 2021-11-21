@@ -260,6 +260,7 @@ if(stella<=1){
 }
 if(stella>=4){
     d=1.17;
+    
 }
 if(stella<=5){
     possibility_heavy=0;
