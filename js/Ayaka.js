@@ -209,7 +209,7 @@ function eval(){
     =(normal*(1+simenawa+0.3*possibility_talent+u_normal_and_heavy+kentoushi+kokken)
     +heavy*pattern_heavy*(1+2.98*possibility_heavy+simenawa+0.3*possibility_talent+u_normal_and_heavy+kokken)
     +skill*pattern_skill)*(1+0.01*(cyro+u_cyro+cyro_kiri3*kiri_time))
-    +d*burst*pattern_burst*(1+0.4*possibility_burst)(1+u_burst+kizoku+zetsuen)*(1+0.01*(cyro+u_cyro+cyro_kiri3));
+    +d*burst*pattern_burst*(1+0.4*possibility_burst)*(1+u_burst+kizoku+zetsuen)*(1+0.01*(cyro+u_cyro+cyro_kiri3));
 
     if(model==0){
         model=1;
