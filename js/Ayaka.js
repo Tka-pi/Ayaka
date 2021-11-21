@@ -209,7 +209,7 @@ function eval(){
     =(normal*(1+simenawa+0.3*possibility_talent+u_normal_and_heavy+kentoushi+kokken)
     +heavy*pattern_heavy*(1+2.98*possibility_heavy+simenawa+0.3*possibility_talent+u_normal_and_heavy+kokken)
     +skill*pattern_skill)*(1+0.01*(cyro+u_cyro+cyro_kiri3*kiri_time))
-    +burst*pattern_burst*(1+0.4*possibility_burst+u_burst+kizoku+zetsuen)*(1+0.01*(cyro+u_cyro+cyro_kiri3));
+    +d*burst*pattern_burst*(1+0.4*possibility_burst)(1+u_burst+kizoku+zetsuen)*(1+0.01*(cyro+u_cyro+cyro_kiri3));
 
     if(model==0){
         model=1;
@@ -254,9 +254,12 @@ possibility_burst   =Number($("#possibility_burst").val());
 constraint   =Number($("#constraint").val());
 freeze=Number($("#freeze").val());
 
-
+d=1;
 if(stella<=1){
     possibility_burst=0;
+}
+if(stella>=4){
+    d=1.17;
 }
 if(stella<=5){
     possibility_heavy=0;
@@ -269,7 +272,7 @@ time=Number($("#time").val());
 u_ATKrate           =Number($("#u_ATKrate").val());
 u_CRIT              =Number($("#u_CRIT").val());
 u_CRITd             =38.4;
-u_cyro              =Number($("#u_cyro").val());
+u_cyro              =Number($("#u_cyro").val())+18;
 u_normal_and_heavy  =Number($("#u_normal_and_heavy").val())*0.01;
 u_burst             =Number($("#u_burst").val())*0.01;
 
